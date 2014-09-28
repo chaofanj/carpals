@@ -1120,7 +1120,7 @@ display: none;
 }
 
 #clockanalog {
-	background: url(../img/orologio/orologio-rd.png) no-repeat;
+	background: url(../img/orologio-rd.png) no-repeat;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto 20px;
@@ -1146,7 +1146,7 @@ visibility: hidden;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto 0 auto;
-	background: url(../img/orologio/orologio-rd.png) no-repeat;
+	background: url(../img/orologio-rd.png) no-repeat;
 	list-style: none;
 }
 
@@ -1169,19 +1169,19 @@ visibility: visible;
 }
 
 #sec {
-	background: url(../img/orologio/analogseconds.png) center center no-repeat;
+	background: url(../img/analogseconds.png) center center no-repeat;
 	z-index: 3;
 	background-size: 170px;
 }
 
 #min {
-	background: url(../img/orologio/analogminutes.png) center center no-repeat;
+	background: url(../img/analogminutes.png) center center no-repeat;
 	z-index: 2;
 	background-size: 170px;
 }
 
 #hour {
-	background: url(../img/orologio/analoghours.png) center center no-repeat;
+	background: url(../img/analoghours.png) center center no-repeat;
 	z-index: 1;
 	background-size: 170px;
 }

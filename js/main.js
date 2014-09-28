@@ -46,7 +46,6 @@ function startup() {
 	ridimensionaHero();
 	usaWaypoints();
 	parallasse();
-	initializeGmap();
 	$('.hover').hover(function() {
 		$(this).addClass('flip');
 	}, function() {

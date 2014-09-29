@@ -1,0 +1,9 @@
+{
+    "heading": "JASON Ajax Roadmap",
+    "items": {
+        "item1": "Create XHR object",
+        "item2": "Handle the 'onreadystatechange' event",
+        "item3": "Open the request",
+        "item4": "Send the request"
+    }
+}

@@ -1,0 +1,11 @@
+#search-btn {
+    position: absolute;
+    left:300px;
+    top:300px;
+    min-width: 96px;
+    border-radius: 2px;
+    padding: 4px 12px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    border-width: 0px;
+}

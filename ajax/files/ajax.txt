@@ -1,1 +1,0 @@
-Your Ajax request was successful 

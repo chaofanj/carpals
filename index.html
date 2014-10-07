@@ -5,12 +5,68 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Carpals</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        var proArr = new Array();
+        proArr[0] = [];
+        proArr[1] = ['型号0', '型号1', '型号2', '型号3'];
+        proArr[2] = ['型号0', '型号1', '型号2'];
+        proArr[3] = ['型号0', '型号1', '型号2'];
+        proArr[5] = ['型号0', '型号1', '型号2'];
+        proArr[6] = ['型号0', '型号1', '型号2'];
+        proArr[7] = ['型号0', '型号1', '型号2'];
+        proArr[8] = ['型号0', '型号1', '型号2'];
+        proArr[9] = ['型号0', '型号1', '型号2'];
+        proArr[10] = ['型号0', '型号1', '型号2'];
+        proArr[11] = ['型号0', '型号1', '型号2'];
+        proArr[12] = ['型号0', '型号1', '型号2'];
+        proArr[13] = ['型号0', '型号1', '型号2'];
+        proArr[14] = ['型号0', '型号1', '型号2'];
+        proArr[15] = ['型号0', '型号1', '型号2'];
+        proArr[16] = ['型号0', '型号1', '型号2'];
+        proArr[17] = ['型号0', '型号1', '型号2'];
+        proArr[18] = ['型号0', '型号1', '型号2'];
+        proArr[19] = ['型号0', '型号1', '型号2'];
+        proArr[20] = ['型号0', '型号1', '型号2'];
+        proArr[21] = ['型号0', '型号1', '型号2'];
+        proArr[22] = ['型号0', '型号1', '型号2'];
+        proArr[23] = ['型号0', '型号1', '型号2'];
+        proArr[24] = ['型号0', '型号1', '型号2'];
+        proArr[25] = ['型号0', '型号1', '型号2'];
+        proArr[26] = ['型号0', '型号1', '型号2'];
+        proArr[27] = ['型号0', '型号1', '型号2'];
+        proArr[28] = ['型号0', '型号1', '型号2'];
+        proArr[29] = ['型号0', '型号1', '型号2'];
+        proArr[30] = ['型号0', '型号1', '型号2'];
+        proArr[31] = ['型号0', '型号1', '型号2'];
+        proArr[32] = ['型号0', '型号1', '型号2'];
+        proArr[33] = ['型号0', '型号1', '型号2'];
+        proArr[34] = ['型号0', '型号1', '型号2'];
+        proArr[35] = ['型号0', '型号1', '型号2'];
+        proArr[36] = ['型号0', '型号1', '型号2'];
+        proArr[37] = ['型号0', '型号1', '型号2'];
+        proArr[38] = ['型号0', '型号1', '型号2'];
+
+        function changeCity() {
+            //1.获取对象
+            var proEle = document.getElementById("province");
+            var cityEle = document.getElementById("city");
+            //2.将以前的城市清0
+            cityEle.length = 1;
+            //3.获取省份的提交值
+            var proVal = proEle.value;
+            //4.根据省份的值,来决定城市的值
+            for (var i = 0; i < proArr[proVal].length; i++) {
+                var optEle = new Option(proArr[proVal][i], i.toString());
+                cityEle.add(optEle);
+            }
+        }
+    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,7 +75,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body onload="changeCity()">
     <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -29,92 +85,175 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
+
                 <a href="#" class="navbar-brand">Carpals</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-contents">
                 <ul class="nav navbar-nav" role="navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
-                    <li><a href="#">search</a></li>
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="about.html">about</a>
+                    </li>
+                    <li><a href="searchresult.html">search</a>
+                    </li>
                 </ul>
-                
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">Sign in</a></li>
+                    <li><a href="register.html">注册</a>
+                    </li>
+                    <li><a href="login.html">登录</a>
+                    </li>
                     <li>
-                        <button type="button" class="btn btn-warning navbar-btn btn-sm">Take the tour</button>
+                        <button type="button" class="btn btn-warning navbar-btn btn-sm">随便转转</button>
                     </li>
                 </ul>
             </div>
         </div>
-            
+
     </header>
-    <img class="relative" src="img/bg.jpg" style="width: 100%;" >
-    <div class="container isearch">
-    <div class="container  ">
-       <label class="radio-inline col-md-offset-2 iradio" >
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 新车
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 二手车
-</label>
-<label class="radio-inline">
-  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 卖车
-</label>
-        <form role="form col-md-6" >
-  <div class="form-group col-md-3">
-    <select class="form-control ">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-  </div>
-  
-  
-  <div class="form-group col-md-3">
-     <select class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-  </div>
-  </form>
-  
+    <img class="relative" src="img/bg.jpg" style="width: 100%;">
+    <div class="container isearch col-sm-6" style="background-color: #00bfff">
+        <img src="img/logo.png" style="width: 100%">
+        <ul class="list-inline list-unstyled">
+            <li style="padding-left: 50px;">
+                <label class="radio-inline iradio">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">新车
+                </label>
+            </li>
+            <li style="padding-left: 50px;">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">二手车
+                </label>
+            </li>
+            <li style="padding-left: 50px;">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">卖车
+                </label>
+            </li>
+        </ul>
+
+
+
+
+        <form role="form col-md-12">
+            <div class="form-group col-md-6 ">
+
+                <select class="form-control" onchange="changeCity()" id="province">
+                    <option value="0">制造商</option>
+                    <option value="1">阿斯顿马丁</option>
+                    <option value="2">奥迪</option>
+                    <option value="3">宝马</option>
+                    <option value="4">保时捷</option>
+                    <option value="5">宾利</option>
+                    <option value="6">别克</option>
+                    <option value="7">卡迪拉克</option>
+                    <option value="8">雪佛兰</option>
+                    <option value="9">道奇</option>
+                    <option value="10">法拉利</option>
+                    <option value="11">菲亚特</option>
+                    <option value="12">福特</option>
+                    <option value="13">通用</option>
+                    <option value="14">丰田</option>
+                    <option value="15">现代</option>
+                    <option value="16">英菲尼迪</option>
+                    <option value="17">捷豹</option>
+                    <option value="18">起亚</option>
+                    <option value="19">吉普</option>
+                    <option value="20">兰博基尼</option>
+                    <option value="21">路虎</option>
+                    <option value="22">雷克萨斯</option>
+                    <option value="23">林肯</option>
+                    <option value="24">玛莎拉蒂</option>
+                    <option value="25">马自达</option>
+                    <option value="26">迈凯轮</option>
+                    <option value="27">梅赛德斯·奔驰</option>
+                    <option value="28">mini</option>
+                    <option value="29">尼桑</option>
+                    <option value="30">本田</option>
+                    <option value="31">smart</option>
+                    <option value="32">斯巴鲁</option>
+                    <option value="33">沃尔沃</option>
+                    <option value="34">吉利</option>
+                    <option value="35">比亚迪</option>
+                    <option value="36">奇瑞</option>
+                    <option value="37">哈弗</option>
+                    <option value="38">夏利</option>
+                </select>
+
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <select class="form-control" id="city">
+                    <option value="-1">型号</option>
+                </select>
+            </div>
+        </form>
+
+
+        <form role="form col-md-12">
+            <div class="col-md-6">
+                <select class="form-control ">
+                    <option>最高价格</option>
+                    <option>5，000￥</option>
+                    <option>10,000￥</option>
+                    <option>20,000￥</option>
+                    <option>50,000￥</option>
+                    <option>80,000￥</option>
+                    <option>100,000￥</option>
+                    <option>120,000￥</option>
+                    <option>150,000￥</option>
+                    <option>200,000￥</option>
+                    <option>300,000￥</option>
+                    <option>400,000￥</option>
+                    <option>500,000￥</option>
+                    <option>600,000￥</option>
+                    <option>700,000￥</option>
+                    <option>800,000￥</option>
+                    <option>800,000￥</option>
+                    <option>900,000￥</option>
+                    <option>1，000,000￥</option>
+                    <option>15，000,000￥</option>
+                    <option>20,000,000￥</option>
+                    <option>30,000,000￥</option>
+                    <option>40,000,000￥</option>
+                    <option>50,000,000￥</option>
+                    <option>80,000,000￥</option>
+                    <option>100,000,000￥</option>
+                    <option>150,000,000￥</option>
+                    <option>200,000,000￥</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-4 ">
+                <select class="form-control select-lg">
+                    <option>行驶里程</option>
+                    <option>500</option>
+                    <option>3000</option>
+                    <option>20000</option>
+                    <option>50000</option>
+                    <option>100000</option>
+                    <option>150000</option>
+                    <option>200000</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-warning col-sm-2">搜索</button>
+
+        </form>
+
     </div>
-    
-  <div class="container ">
-  <form role="form col-md-6" >
-  <div class="form-group col-md-3">
-    <select class="form-control ">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-  </div>
-  <div class="form-group col-md-2">
-     <select class="form-control select-lg">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-  </div>
-  <button type="submit" class="btn btn-info">Submit</button>
-  
-  </form>
-  
-</div>
-  </div>
-   <footer id="footer">
+    <section>
+
+        <div class="container">
+            <hr>
+            <h1>为什么选择我们</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia placeat beatae, reprehenderit accusamus deleniti, similique natus minima autem, nisi in a praesentium eveniet blanditiis ducimus sint mollitia deserunt illum! Officiis eos aliquam officia, dicta animi porro nam voluptates optio, dolorem maiores inventore sed! Ipsam harum, possimus illum neque repellat dignissimos voluptatem deleniti. Mollitia eaque sed vel consequatur nesciunt nam optio quo inventore ratione porro commodi deserunt iusto amet delectus expedita, nulla ipsum beatae aliquid maxime error adipisci, non esse. Tempora assumenda placeat saepe debitis nisi natus consequatur, pariatur sapiente officia voluptates, exercitationem molestiae sit quo error quia dicta, soluta suscipit quae totam animi voluptas nobis! Porro dicta aut cupiditate odit dolore aspernatur sapiente excepturi explicabo suscipit numquam rem provident culpa nobis incidunt commodi ab aliquam recusandae quaerat quia maxime accusamus maiores, veritatis necessitatibus! Enim cumque id tempore dolorum optio voluptas, voluptatibus quae. Atque recusandae doloremque animi eveniet non alias ipsum repellat nobis quo reprehenderit, soluta, iste, nesciunt ab voluptates blanditiis, pariatur repudiandae enim inventore? Amet eum ratione consectetur? Aliquid ad, expedita ipsa quia ut nemo esse nulla velit facilis quos, reiciendis, dolor perspiciatis quod inventore eligendi ducimus dolores cumque eum alias? Voluptatum doloribus a possimus facilis eos sunt quisquam asperiores inventore laborum explicabo tenetur facere quas, soluta aliquam delectus quibusdam eius. Nemo facilis quo quas, sequi molestias tempore consequuntur fugiat dolore accusantium vel praesentium quasi assumenda sed, perferendis iusto voluptatibus dignissimos minus optio reiciendis nihil deleniti? Ullam iusto tempore in facilis inventore, dolores nemo maiores aliquam molestias ipsum, modi? Ipsum natus odio vitae, quo est error labore perspiciatis, nam suscipit alias, debitis in repellat similique quas cum veniam adipisci architecto. Cupiditate quisquam iusto, saepe perferendis inventore eos, rerum enim excepturi maiores voluptatibus fuga suscipit omnis fugit animi sed repellat adipisci dolor necessitatibus molestias minus quia illo optio ipsa. Repudiandae, a.</p>
+
+            <hr>
+        </div>
+    </section>
+
+    <footer id="footer">
         <div class="container">
             <h2>new<small> car</small></h2>
             <hr>
@@ -228,11 +367,143 @@
             </div>
 
 
+        </div>
+
+        <div class="container" style="background-color: #c0c0c0;">
+            <hr>
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3">
+                            <h5>Product</h5>
+                            <ul>
+                                <li class="create">
+                                    <a href="https://www.bunkr.me/en/create-presentation/"></a>
+                                </li>
+                                <li class="gallery"><a href="https://www.bunkr.me/gallery">Gallery</a>
+                                </li>
+                                <li class="collaborate"><a href="https://www.bunkr.me/en/collaborate/"> Collaborate</a>
+                                </li>
+                                <li class="vision"><a href="https://www.bunkr.me/en/product-vision/">Product Vision</a>
+                                </li>
+                                <li class="pricing"><a href="https://www.bunkr.me/en/pricing/">Pricing</a>
+                                </li>
+                                <li class="support"><a target="_blank" href="http://bunkr.uservoice.com/">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-sm-3">
+                            <h5>Customers</h5>
+
+                            <ul>
+                                <li class="schools"></li>
+                                <li class="incubators">
+                                    <a href="https://www.bunkr.me/en/incubators/"></a>
+                                </li>
+                                <li class="speakers">
+                                    <a href="https://www.bunkr.me/en/speakers/"></a>
+                                </li>
+                                <li class="ambassadors">
+                                    <a href="https://www.bunkr.me/en/ambassadors/"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-2 col-sm-3">
+                            <h5>Company</h5>
+                            <ul>
+                                <li class="story"><a href="https://www.bunkr.me/en/story/">Story</a>
+                                </li>
+                                <li class="values"><a href="https://www.bunkr.me/en/values/">Our values</a>
+                                </li>
+                                <li class="team"><a href="https://www.bunkr.me/en/team/">Team</a>
+                                </li>
+                                <li class="jobs"><a href="https://www.bunkr.me/en/jobs/">Jobs</a>
+                                </li>
+                                <li class="partners"><a href="https://www.bunkr.me/en/partners/">Partners</a>
+                                </li>
+                                <li><a target="_blank" href="http://bunkr.spreadshirt.fr/">Shop</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-sm-3">
+                            <h5>News/Press</h5>
+
+                            <ul>
+                                <li><a class="blog" target="_blank" href="http://blog.bunkr.me">Blog</a>
+                                </li>
+                                <li class="press_releases"><a href="https://www.bunkr.me/en/press-releases/">Press releases</a>
+                                </li>
+                                <li class="press_review"><a href="https://angel.co/bunkr/activity#press">Press review</a>
+                                </li>
+                                <li class="media_kit">
+                                    <a href="https://dl.dropboxusercontent.com/u/41953939/mediakit.zip" target="_blank">
+                                        <span class="glyphicon glyphicon-download">
+                                        </span>Media Kit</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3">
+                            <h5>Community</h5>
+                            <ul class="social-btn-list community-icon-set-list">
+                                <li>
+                                    <a class="community-icon-twitter" href="https://twitter.com/bunkrapp" target="_blank">
+                                Twitter
+                            </a>
+                                </li>
+                                <li>
+                                    <a class="community-icon-facebook" href="https://www.facebook.com/bunkrapp" target="_blank">Facebook</a>
+                                </li>
+                                <li>
+                                    <a class="community-icon-google" rel="publisher" href="https://plus.google.com/109603257459927939011" target="_blank">Google +
+</a>
+                                </li>
+                                <li>
+                                    <a class="community-icon-youtube" href="https://www.youtube.com/webappbunkr" target="_blank">YouTube</a>
+                                </li>
+                                <li>
+                                    <a class="community-icon-instagram" href="http://instagram.com/bunkrapp" target="_blank">
+                                Instagram
+                            </a>
+                                </li>
+                                <li>
+                                    <a class="community-icon-linkedin" href="https://www.linkedin.com/company/bunkr" target="_blank">
+                                LinkedIn
+                            </a>
+                                </li>
+                                <li>
+                                    <a class="community-icon-angellist" href="https://angel.co/bunkr" target="_blank">
+                                Angel List
+                            </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="row copyright">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-5">
+
+                                    Copyright 2014 Carpals. All rights reserve.
+
+                                </div>
+                                <div class="col-md-6 col-sm-5">
+                                    <a href="https://www.bunkr.me/en/terms"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
         </div>
     </footer>
-  
-<!--    <script src="js/main.js"></script>-->
+
+    <!--    <script src="js/main.js"></script>-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->

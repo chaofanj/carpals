@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Carpals</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,32 +34,127 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
+
                 <a href="#" class="navbar-brand">Carpals</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-contents">
-                <ul class="nav navbar-nav" role="navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
-                    <li><a href="#">search</a></li>
+               <ul class="nav navbar-nav" role="navigation">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="about.html">about</a>
+                    </li>
+                    <li><a href="searchresult.html">search</a>
+                    </li>
                 </ul>
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">Sign in</a></li>
+
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="register.html">注册</a>
+                    </li>
+                    <li><a href="login.html">登录</a>
+                    </li>
                     <li>
-                        <button type="button" class="btn btn-warning navbar-btn btn-sm">Take the tour</button>
+                        <button type="button" class="btn btn-warning navbar-btn btn-sm">随便转转</button>
                     </li>
                 </ul>
             </div>
-        <embed src="http://player.youku.com/player.php/sid/XNzQxOTM5MjA0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-        </div>
-            
-    </header>  
-    
 
-<!--    <script src="js/main.js"></script>-->
+        </div>
+
+    </header>
+    <section>
+        <div class="container">
+            <div class="col-sm-8">
+                <embed class="video" src="http://player.youku.com/player.php/sid/XNzQxOTM5MjA0/v.swf" allowFullScreen="true" quality="high" width="100%" height="600px" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" style="padding-top: 30px"></embed>
+                <div class="container">
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div id="legend" class="">
+                            <legend class="">检查是否可用</legend>
+                        </div>
+
+
+
+                        <div class="control-group">
+
+                            <!-- Textarea -->
+                            <label class="control-label">留言内容</label>
+                            <div class="controls">
+                                <div class="textarea">
+                                    <textarea type="" class="" style="margin: 0px; height: 127px; width: 314px;">你好，我对XXX车型感兴趣，价格是1234</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form role="form">
+
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1">姓名</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="输入姓名">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Phone Number</label>
+                        <input class="form-control" id="exampleInputPassword1" placeholder="Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">所在城市</label>
+                        <input class="form-control" id="exampleInputPassword1" placeholder="输入城市">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">同意隐私政策
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-info">检查可用</button>
+                </form>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <hr>
+    <div class="container">
+        <ul class="list-unstyled list-inline">
+            <li style="padding-left: 70px;">
+                <a href="#">
+                    <img src="img/pic1.jpg">
+                </a>
+            </li>
+            <li style="padding-left: 70px;">
+                <a href="#">
+                    <img src="img/pic1.jpg">
+                </a>
+            </li>
+            <li style="padding-left: 70px;">
+                <a href="#">
+                    <img src="img/pic1.jpg">
+                </a>
+            </li>
+            <li style="padding-left: 70px;">
+                <a href="#">
+                    <img src="img/pic1.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--    <script src="js/main.js"></script>-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->

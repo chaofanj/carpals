@@ -52,15 +52,15 @@
         proArr[37] = ['型号0', '型号1', '型号2'];
         proArr[38] = ['型号0', '型号1', '型号2'];
 
-        function changeCity() {
+        function changeModel() {
             //1.获取对象
-            var proEle = document.getElementById("province");
-            var cityEle = document.getElementById("city");
+            var proEle = document.getElementById("vendor");
+            var cityEle = document.getElementById("model");
             //2.将以前的城市清0
             cityEle.length = 1;
             //3.获取省份的提交值
             var proVal = proEle.value;
-            //4.根据省份的值,来决定城市的值
+
             for (var i = 0; i < proArr[proVal].length; i++) {
                 var optEle = new Option(proArr[proVal][i], i.toString());
                 cityEle.add(optEle);
@@ -75,7 +75,7 @@
     <![endif]-->
 </head>
 
-<body onload="changeCity()">
+<body onload="changeModel()">
     <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -86,7 +86,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a href="#" class="navbar-brand">Carpals</a>
+                <a href="index.html" class="navbar-brand">Carpals</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-contents">
                 <ul class="nav navbar-nav" role="navigation">
@@ -116,7 +116,7 @@
         <img src="img/logo.png" style="width: 100%">
         <ul class="list-inline list-unstyled">
             <li style="padding-left: 50px;">
-                <label class="radio-inline iradio">
+                <label class="radio-inline iradio active">
                     <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">新车
                 </label>
             </li>
@@ -138,7 +138,7 @@
         <form role="form col-md-12">
             <div class="form-group col-md-6 ">
 
-                <select class="form-control" onchange="changeCity()" id="province">
+                <select class="form-control" onchange="changeModel()" id="vendor">
                     <option value="0">制造商</option>
                     <option value="1">阿斯顿马丁</option>
                     <option value="2">奥迪</option>
@@ -184,7 +184,7 @@
 
 
             <div class="form-group col-md-6">
-                <select class="form-control" id="city">
+                <select class="form-control" id="model">
                     <option value="-1">型号</option>
                 </select>
             </div>
@@ -228,16 +228,16 @@
             <div class="form-group col-md-4 ">
                 <select class="form-control select-lg">
                     <option>行驶里程</option>
-                    <option>500</option>
-                    <option>3000</option>
-                    <option>20000</option>
-                    <option>50000</option>
-                    <option>100000</option>
-                    <option>150000</option>
-                    <option>200000</option>
+                    <option>500km</option>
+                    <option>3000km</option>
+                    <option>20000km</option>
+                    <option>50000km</option>
+                    <option>100000km</option>
+                    <option>150000km</option>
+                    <option>200000km</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-warning col-sm-2">搜索</button>
+            <a href="searchresult.html" class="btn btn-md btn-warning col-sm-2">查询</a>
 
         </form>
 
